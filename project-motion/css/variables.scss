@@ -1,0 +1,19 @@
+//Variables and Mixins
+
+//Colours
+$background: #FFFAFA;
+$text: #000000;
+
+//Mixins
+@mixin font {
+
+
+	font-family: brandon-grotesque, sans-serif;
+
+	font-weight: 300;
+
+	font-style: normal;
+
+	color: black;
+	
+}

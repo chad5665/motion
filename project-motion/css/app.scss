@@ -1,0 +1,150 @@
+@import "variables.scss";
+@import 'src/motion-ui';
+
+@include motion-ui-transitions;
+@include motion-ui-animations;
+
+//General
+* {
+	box-sizing: border-box;
+}
+body {
+    background-color: $background;
+    @include font();
+    color: $text;
+}
+#wrapper {
+    margin: 0;
+	padding: 0;
+	border: 0px none;
+}
+//General Styling
+h1, h2, h3, h4, h5, h6 {
+    @include font();
+    width: fit-content;
+}
+p {
+    display: none;
+}
+li {
+    display: none;
+    list-style-type: none;
+}
+a {
+    outline: none;
+    color: $text;
+    @include font();
+
+    &:hover {
+        color: $text;
+    }
+    &:focus {
+        color: $text;
+    }
+} 
+h1 {
+    display: inline-block;
+    margin: 2%;
+    font-size: 1rem;
+
+    a {
+        &:hover {
+            color: $text;
+            font-size: 1.2rem;
+        }
+        &:focus {
+            color: $text;
+            font-size: 1.2rem;
+        }
+    }
+}
+h2 {
+    font-size: 1.5em;
+    margin: 10% 0 4% 0;
+    
+    &:hover {
+        font-size: 1.7rem;
+    }
+    &:focus {
+        font-size: 1.7rem;
+    }
+
+    @media only screen and (max-width: 320px) {
+        margin-top: 20%;
+    }
+}
+h3 {
+    font-size: 1.2em;
+    display: none;
+}
+//Elements
+header {
+    height: auto;
+    position: -webkit-sticky;
+	position: sticky;
+    z-index: 2;
+    top: 0px;
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+
+        .reset {
+            width: fit-content;
+            margin: 2%;
+            font-size: 1rem;
+
+            &:hover {
+                color: $text;
+                font-size: 1.2rem;
+            }
+            &:focus {
+                color: $text;
+                font-size: 1.2rem;
+            }
+        }
+    }
+    @media only screen and (max-width: 1024px) {
+        background-color: $background;
+    }
+}
+main {
+    margin: 3% 0;
+    /*min-height: 5000px;*/
+    min-height: 100vh;
+
+    h3 {
+        margin: 10% 0 2% 0;
+
+        @media only screen and (max-width: 320px) {
+            margin-top: 20%;
+        }
+    }
+    .works-link {
+        &:hover {
+            color: $text;
+            font-size: 1.4rem;
+        }
+        &:focus {
+            color: $text;
+            font-size: 1.4rem;
+        }
+    }
+}
+footer {
+    height: auto;
+    position: -webkit-sticky;
+	position: sticky;
+    z-index: 2;
+    bottom: 0px;
+
+    h4 {
+        display: inline-block;
+        margin: 2%;
+        font-size: 1rem;
+    }
+
+    @media only screen and (max-width: 1024px) {
+        background-color: $background;
+    }
+}
